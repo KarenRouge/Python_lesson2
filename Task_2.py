@@ -1,14 +1,11 @@
-numbers = list(map(str, input("Введите несколько любых чисел через пробел: ").split()))
-print(numbers)
-k = 0
-for i in range(k+1):
+numbers = list(input("Введите несколько любых чисел через пробел: ").split())
+for i in range(len(numbers)//2):
     print("было", numbers)
-    numbers[k], numbers[i] = numbers[i], numbers[k]
+    a = 2*i
+    b = a+1
+    if b < len(numbers):
+        numbers[a], numbers[b] = numbers[b], numbers[a]
     print("стало", numbers)
-    k = k + 2
-    
-
-
 
 
 
